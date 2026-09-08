@@ -48,6 +48,10 @@ The I2C pins are fixed by the implementation:
 | SDA | PB0 |
 | SCL | PB2 |
 
+ATtiny25/45/85 pinout reference:
+
+![ATtiny25/45/85 pinout](attiny_pinout.jpeg)
+
 Also connect:
 
 | BME280 signal | Connection |
