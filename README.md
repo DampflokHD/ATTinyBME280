@@ -112,10 +112,11 @@ A complete Arduino IDE example is available in
 [`examples/BasicRead/BasicRead.ino`](examples/BasicRead/BasicRead.ino).
 For two BME280 devices with addresses `0x76` and `0x77`, see
 [`examples/DualSensor/DualSensor.ino`](examples/DualSensor/DualSensor.ino).
-For a quick serial monitor test using the Arduino `Serial` API, see
+For a quick serial monitor test using the Arduino `SoftwareSerial` library, see
 [`examples/SerialMonitor/SerialMonitor.ino`](examples/SerialMonitor/SerialMonitor.ino).
-This example depends on the serial implementation provided by the selected
-Arduino core; the BME280 library itself still does not require `Arduino.h`.
+It transmits on `PB3` and leaves `PB0` free for I2C SDA. The RX pin is unused and
+is assigned to `PB4` only because `SoftwareSerial` requires an RX argument. The
+BME280 library itself still does not require `Arduino.h`.
 
 ```cpp
 #include <ATTinyBME280.h>
