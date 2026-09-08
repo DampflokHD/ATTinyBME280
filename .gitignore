@@ -67,3 +67,26 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# PlatformIO
+.pio/
+.pioids/
+
+# AVR / Hardware Build Outputs
+*.elf
+*.hex
+*.bin
+*.eep
+
+# IDEs & Editors
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.workspace
+*.suo
+*.user
+
+# OS Specific
+.DS_Store
+Thumbs.db
+Desktop.ini
