@@ -2,7 +2,7 @@
  * @file ATTinyBME280.cpp
  * @author DampflokHD
  * @brief Implementation of the lightweight USI-based BME280 library for ATtiny MCUs.
- * @version 1.0.0
+ * @version 1.0.1
  * @date 2026-09-08
  * 
  * @copyright Copyright (c) 2026 DampflokHD. Licensed under the MIT License.
@@ -254,9 +254,9 @@ bool ATTinyBME280::isConnected() {
 }
 
 void ATTinyBME280::prepareSleep() {
-    // Release bus lines to input mode with pull-ups to avoid current leakage
+    // Release the bus lines; external I2C pull-ups keep them HIGH during sleep.
     DDR_USI  &= ~((1 << PORT_SDA) | (1 << PORT_SCL));
-    PORT_USI |= (1 << PORT_SDA) | (1 << PORT_SCL);
+    PORT_USI &= ~((1 << PORT_SDA) | (1 << PORT_SCL));
 }
 
 bool ATTinyBME280::readCalibration() {
