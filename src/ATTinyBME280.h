@@ -2,7 +2,7 @@
  * @file ATTinyBME280.h
  * @author DampflokHD
  * @brief Lightweight, USI-based BME280 library tailored for ATtiny MCUs with low power consumption and customizable I2C clock frequency.
- * @version 1.0.0
+ * @version 1.0.1
  * @date 2026-09-08
  * 
  * @copyright Copyright (c) 2026 DampflokHD. Licensed under the MIT License.
